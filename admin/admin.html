@@ -162,7 +162,7 @@ async function loadMessages() {
       div.addEventListener('click', (e) => {
         if(e.target.tagName !== 'BUTTON') {
           localStorage.setItem('currentMessageId', msg.id);
-          window.location.href = 'viewmessage.html';
+          window.location.href = '/admin/viewmessage.html';
         }
       });
 
