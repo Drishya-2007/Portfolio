@@ -87,10 +87,28 @@ button:hover {
       margin-top: 10px;
       font-size: 14px;
     }
+    #homeBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background: #38bdf8;
+  color: black;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(56,189,248,0.3);
+  transition: 0.3s;
+}
+
+#homeBtn:hover {
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
-
+<button id="homeBtn">🏠 Home</button>
 <div class="login-box">
   <h2>Admin Login</h2>
   <input type="text" id="username" placeholder="Username" required>
@@ -116,6 +134,9 @@ function login() {
     document.getElementById('errorMsg').innerText = "Incorrect username or password!";
   }
 }
+document.getElementById("homeBtn").onclick = () => {
+  window.location.href = "/Portfolio/";
+};
 </script>
 
 </body>
